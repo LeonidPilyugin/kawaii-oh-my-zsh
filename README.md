@@ -1,2 +1,2 @@
 # kawaii-oh-my-zsh
-Kawaii oh-my-zsh theme
+Kawaii oh-my-zsh themes
