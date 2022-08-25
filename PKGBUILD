@@ -13,7 +13,7 @@ source=("$pkgname-$pkgver.tar.gz::https://github.com/LeonidPilyugin/$pkgname/rel
 sha256sums=('23f470fb384d62075d60c60cfc163aafde9efb41d9980166bf7e2fe803fbe17a')
 
 package() {
-    dir=$pkgdir/usr/share/oh-my-zsh/themes/
+    dir=$pkgdir/usr/share/oh-my-zsh/themes
     install -md755 $dir
-    cp $srcdir/files/* $dir
+    cp $srcdir/files/* $dir/
 }
