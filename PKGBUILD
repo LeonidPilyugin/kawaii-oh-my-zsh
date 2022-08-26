@@ -4,13 +4,13 @@ pkgname=kawaii-oh-my-zsh
 pkgver=1.1
 pkgrel=1
 pkgdesc='Framework for kawaii zsh configuration.'
-arch=('x86_64')
+url='https://github.com/LeonidPilyugin/kawaii-oh-my-zsh'
+groups=(kawaii)
+arch=(x86_64)
 depends=('oh-my-zsh-git')
-groups=('kawaii')
-url="https://github.com/ohmyzsh/ohmyzsh"
 license=('GPL3')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/LeonidPilyugin/$pkgname/releases/download/v$pkgver/files.tar.gz")
-sha256sums=('23f470fb384d62075d60c60cfc163aafde9efb41d9980166bf7e2fe803fbe17a')
+sha256sums=('75fc83f534102263839850faee93d2c44be436531fb41c3e480ef50e655a501b')
 
 package() {
     dir=$pkgdir/usr/share/oh-my-zsh/themes
