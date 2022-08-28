@@ -155,5 +155,5 @@ else
     ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%}✱%{$reset_color%}"
 
     PROMPT='$(username)$(directory_and_git) '
-    RPROMPT='$(return_status) $(git_prompt_status) $(current_time)'
+    RPROMPT='$(git_prompt_status) $(return_status) $(current_time)'
 fi

@@ -1,7 +1,7 @@
 # Maintainer: Leonid Pilyugin  <l.pilyugin04@gmail.com>
 
 pkgname=kawaii-oh-my-zsh
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc='Framework for kawaii zsh configuration.'
 url='https://github.com/LeonidPilyugin/kawaii-oh-my-zsh'
