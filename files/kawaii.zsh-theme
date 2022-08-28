@@ -33,8 +33,22 @@ if [[ $TERM == 'linux' ]]; then
         echo "%F{$SEP_COL}|%f"
     }
 
+    # set the git_prompt_info text
+    ZSH_THEME_GIT_PROMPT_PREFIX=""
+    ZSH_THEME_GIT_PROMPT_SUFFIX=""
+    ZSH_THEME_GIT_PROMPT_DIRTY="*"
+    ZSH_THEME_GIT_PROMPT_CLEAN=" "
+
+    # set the git_prompt_status text
+    ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[cyan]%}ADD%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[yellow]%}MDF%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}DLT%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}RNM%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%}UMG%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%}UTK%{$reset_color%}"
+
     PROMPT='$(open_brack)$(username)$(separator)$(directory)$(close_brack)$(colon) '
-    RPROMPT='$(return_status) $(current_time)'
+    RPROMPT='$(git_prompt_status) $(return_status) $(current_time)'
 
 else
     # цвет текста на всех стрелках

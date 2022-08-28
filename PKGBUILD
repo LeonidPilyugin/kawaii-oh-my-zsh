@@ -1,7 +1,7 @@
 # Maintainer: Leonid Pilyugin  <l.pilyugin04@gmail.com>
 
 pkgname=kawaii-oh-my-zsh
-pkgver=1.2
+pkgver=1.3
 pkgrel=1
 pkgdesc='Framework for kawaii zsh configuration.'
 url='https://github.com/LeonidPilyugin/kawaii-oh-my-zsh'
@@ -10,7 +10,7 @@ arch=(x86_64)
 depends=('oh-my-zsh-git')
 license=('GPL3')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/LeonidPilyugin/$pkgname/releases/download/v$pkgver/files.tar.gz")
-sha256sums=('1560c2f7feee32ce926043f0024919f6136b6846711a008db7563ab44a3f96bb')
+sha256sums=('c59e2d82a2123b601538f349cb4baed20ae64fc3ab575e48cce01af270187309')
 
 package() {
     dir=$pkgdir/usr/share/oh-my-zsh/themes
