@@ -10,7 +10,7 @@ arch=(x86_64)
 depends=('oh-my-zsh-git')
 license=('GPL3')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/LeonidPilyugin/$pkgname/releases/download/v$pkgver/files.tar.gz")
-sha256sums=('75fc83f534102263839850faee93d2c44be436531fb41c3e480ef50e655a501b')
+sha256sums=('1560c2f7feee32ce926043f0024919f6136b6846711a008db7563ab44a3f96bb')
 
 package() {
     dir=$pkgdir/usr/share/oh-my-zsh/themes
