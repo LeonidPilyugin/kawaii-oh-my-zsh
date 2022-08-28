@@ -14,5 +14,3 @@ Terminal mode with git repo:
 Virtual console mode:
 
 ![Virtual console mode](kawaii-preview2.png)
-
-In virtual console git repo info isn't shown
