@@ -106,7 +106,7 @@ else
     }
 
     arrow_end() {
-        echo "%b%f%k%F{$NEXT_ARROW_FG}%K{$NEXT_ARROW_BG}$(right_triangle)%f%k"
+        echo "%b%f%k%F{$NEXT_ARROW_FG}%K{$NEXT_ARROW_BG}$(right_triangle)%k%f"
     }
 
     ok_username() {
@@ -133,14 +133,14 @@ else
     directory_and_git() {
         ARROW_FG=$DIR_TXT_COL
         ARROW_BG=$DIR_ARR_COL
-        NEXT_ARROW_BG=""
+        NEXT_ARROW_BG=default
         NEXT_ARROW_FG=$DIR_ARR_COL
         if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]; then
             NEXT_ARROW_BG=$GIT_ARR_COL
             echo -n "$(arrow_start) %2~ $(arrow_end)"
             ARROW_FG=$GIT_TXT_COL
             ARROW_BG=$GIT_ARR_COL
-            NEXT_ARROW_BG=""
+            NEXT_ARROW_BG=default
             NEXT_ARROW_FG=$GIT_ARR_COL
             echo "$(arrow_start) $(git_prompt_info) $(arrow_end)"
         else
