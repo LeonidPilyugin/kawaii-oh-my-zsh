@@ -1,4 +1,4 @@
-if [[ $TERM == 'linux' ]]; then
+if [[ $TERM == 'linux' || $TERM == 'xterm' ]]; then
     USER_COL=5
     DIR_COL=6
     UWU_COL=5
