@@ -142,7 +142,7 @@ else
             ARROW_BG=$GIT_ARR_COL
             NEXT_ARROW_BG=default
             NEXT_ARROW_FG=$GIT_ARR_COL
-            echo "$(arrow_start) $(git_prompt_info) $(arrow_end)"
+            echo "$(arrow_start) $(_omz_git_prompt_info) $(arrow_end)"
         else
             echo -n "$(arrow_start) %2~ $(arrow_end)"
         fi
