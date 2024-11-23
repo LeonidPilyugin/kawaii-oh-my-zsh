@@ -33,6 +33,10 @@ if [[ $TERM == 'linux' || $TERM == 'xterm' ]]; then
         echo "%F{$SEP_COL}|%f"
     }
 
+    powercap() {
+        echo "%B%F{$TIME_COL}$(cat /sys/class/power_supply/BAT1/capacity)%%%f%b"
+    }
+
     # set the git_prompt_info text
     ZSH_THEME_GIT_PROMPT_PREFIX=""
     ZSH_THEME_GIT_PROMPT_SUFFIX=""
@@ -49,6 +53,9 @@ if [[ $TERM == 'linux' || $TERM == 'xterm' ]]; then
 
     PROMPT='$(open_brack)$(username)$(separator)$(directory)$(close_brack)$(colon) '
     RPROMPT='$(git_prompt_status) $(return_status) $(current_time)'
+    if [ -f /sys/class/power_supply/BAT1/capacity ]; then
+        RPROMPT="$RPROMPT $(powercap)"
+    fi
 
 else
     # цвет текста на всех стрелках
@@ -154,6 +161,10 @@ else
         echo "%B%F{$TIME_COL}%*%f%b"
     }
 
+    powercap() {
+        echo "%B%F{$TIME_COL}$(cat /sys/class/power_supply/BAT1/capacity)%%%f%b"
+    }
+
     # set the git_prompt_info text
     ZSH_THEME_GIT_PROMPT_PREFIX=""
     ZSH_THEME_GIT_PROMPT_SUFFIX=""
@@ -170,4 +181,8 @@ else
 
     PROMPT='$(username)$(directory_and_git) '
     RPROMPT='$(git_prompt_status) $(return_status) $(current_time)'
+
+    if [ -f /sys/class/power_supply/BAT1/capacity ]; then
+        RPROMPT="$RPROMPT $(powercap)"
+    fi
 fi
