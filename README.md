@@ -15,10 +15,6 @@ Terminal mode:
 
 ![Terminal mode](kawaii-preview1.png)
 
-Terminal mode with git repo:
-
-![Git mode](kawaii-preview3.png)
-
 Virtual console mode:
 
 ![Virtual console mode](kawaii-preview2.png)
